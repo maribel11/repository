@@ -30,8 +30,8 @@ import com.gl.todolist.services.exceptions.UserException;
 @RequestMapping("/session")
 public class ConfirmationController extends BaseController {
 
-	@Autowired
-	UserServices userServices;
+	//@Autowired
+	//UserServices userServices;
 	
 	public ConfirmationController() {
 		super();
@@ -43,7 +43,7 @@ public class ConfirmationController extends BaseController {
 	@ResponseBody
 	public User confirmation(String email, String token) throws UserException {
 		User user = null;
-		userServices.userConfirmation(email, token);
+		//userServices.userConfirmation(email, token);
 		return user;
 	}
 }

@@ -13,5 +13,5 @@ public interface TaskServices {
 	void deleteTask(Long id) throws EntityNotFoundException;
 	List<Task> listTask(User user);
 	Task findTask(Long id) throws EntityNotFoundException;
-	
+	List<Task> listAll();
 }

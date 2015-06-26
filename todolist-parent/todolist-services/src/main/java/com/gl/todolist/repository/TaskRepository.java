@@ -13,5 +13,6 @@ public interface TaskRepository {
 	void remove(Long id) throws EntityNotFoundException;
 	Task find(Long id) throws EntityNotFoundException;
 	List<Task> findTasks(User user);
+	List<Task> findAll();
 	
 }

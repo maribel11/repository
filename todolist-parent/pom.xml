@@ -75,7 +75,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
-			<scope>test</scope>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
@@ -175,9 +175,21 @@
 			<version>${commons-lang3.version}</version>
 			<scope>test</scope>
 		</dependency>
-            		
-
-		
+            	
+            	
+        <!-- AOP -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.6.11</version>
+		</dependency>       		
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.11</version>
+		</dependency>
+			
+			
 	</dependencies>
 
 	<modules>

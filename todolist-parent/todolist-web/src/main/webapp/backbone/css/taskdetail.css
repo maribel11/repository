@@ -1,10 +1,10 @@
-.taskdetail{
-	display: table;
+.taskdetail {
+  display: table;
 }
-.left{
-	float:left;
-	width: 150px;
+.left {
+  float: left;
+  width: 150px;
 }
-.right{
-	float:right;
+.right {
+  float: right;
 }

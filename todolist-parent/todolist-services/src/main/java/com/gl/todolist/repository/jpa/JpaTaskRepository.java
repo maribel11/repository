@@ -50,4 +50,11 @@ public class JpaTaskRepository implements TaskRepository{
 		return resultList;
 	}
 
+	@Override
+	public List<Task> findAll() {
+		Query q = em.createQuery("FROM tasks");
+		List<Task> resultList = q.getResultList();
+		return resultList;
+	}
+
 }

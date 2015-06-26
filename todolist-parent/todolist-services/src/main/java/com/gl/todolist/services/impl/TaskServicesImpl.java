@@ -38,5 +38,11 @@ public class TaskServicesImpl implements TaskServices{
 	public Task findTask(Long id) throws EntityNotFoundException {
 		return taskRepository.find(id);
 	}
+
+	@Override
+	public List<Task> listAll() {
+		// TODO Auto-generated method stub
+		return taskRepository.findAll();
+	}
 		
 }

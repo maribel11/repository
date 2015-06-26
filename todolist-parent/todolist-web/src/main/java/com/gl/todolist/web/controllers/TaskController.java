@@ -37,15 +37,22 @@ public class TaskController extends BaseController {
 	@ResponseBody
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public Task saveTask(@RequestBody Task task, HttpSession session) throws UserException{
-		User user = getLoggedUser();
+		/*User user = getLoggedUser();
 		if(user!=null){
 			task.setUser(user);	
-		}		
+		}*/
+		
+		User user = new User();
+		user.setId(1l);
+		task.setUser(user);
 		return taskServices.saveUpdateTask(task);
 	}
 
 	private User getLoggedUser() {
-		User user = (User) SecurityContextHolder.getContext().getAuthentication().getDetails();
+		//User user = (User) SecurityContextHolder.getContext().getAuthentication().getDetails();
+		User user = new User();
+		user.setId(1l);
+		user.setName("test@test.com");
 		return user;
 	}
 	
@@ -83,10 +90,10 @@ public class TaskController extends BaseController {
 	@ResponseBody
 	@ResponseStatus(value = HttpStatus.OK)
 	public List<Task> listTasks(HttpSession session){
-		User user = getLoggedUser();
+		/*User user = getLoggedUser();
 		if( user == null )
-			throw new SecurityException("No user in session");
-		return taskServices.listTask( user );
+			throw new SecurityException("No user in session");*/
+		return taskServices.listAll();
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
